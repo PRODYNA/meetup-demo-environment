@@ -11,4 +11,4 @@ spec:
       paths:
       - backend:
           serviceName: svc
-          servicePort: 8080
+          servicePort: 80
