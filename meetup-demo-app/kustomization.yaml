@@ -17,4 +17,4 @@ resources:
 images:
 - name: image-placeholder
   newName: fassmus/meetup-demo-app
-  newTag: develop
+  newTag: develop-kaniko
