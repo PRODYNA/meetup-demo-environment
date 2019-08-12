@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+  name: ingress
+spec:
+  rules:
+  - host: meetup-demo-app.fassmus.de
+    http:
+      paths:
+      - backend:
+          serviceName: svc
+          servicePort: 8080

@@ -1,0 +1,7 @@
+apiVersion: cicd.prodyna.com/v1
+kind: Environment
+
+services:
+- path: ./meetup-demo-app
+  type: kustomize
+  imageDigestReplace: true

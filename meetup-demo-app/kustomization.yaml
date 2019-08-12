@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+  - git::https://github.com/PRODYNA/meetup-deployment-base.git?ref=v1.0.0
+
+namespace: dev
+
+namePrefix: meetup-demo-app-
+
+commonLabels:
+  app: meetup-demo-app
+
+resources:
+- ingress.yaml
+
+images:
+- name: image-placeholder
+  newName: fassmus/meetup-demo-app
+  newTag: develop
